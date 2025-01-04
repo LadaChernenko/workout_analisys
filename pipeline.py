@@ -18,7 +18,7 @@ def preprocess_json_objects(
     output_path: str, 
     preprocess_function: Callable[[dict], dict], 
     batch_size: int, 
-    log_file: str = "./data/prep_posts/progress_log.json"
+    log_file: str = "./data/prep_posts/progress_2024_log.json"
 ):
     """
     Iteratively preprocess JSON objects in batches and save to a file.
@@ -92,5 +92,5 @@ if __name__=="__main__":
         input_file="/mnt/workout_analisys/data/posts_2024_prep.json",
         output_path="/mnt/workout_analisys/data/prep_posts",
         preprocess_function=sample_preprocess_function,
-        batch_size=100
+        batch_size=50
     )
