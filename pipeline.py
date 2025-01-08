@@ -92,5 +92,5 @@ if __name__=="__main__":
         input_file="/mnt/workout_analisys/data/posts_2024_prep.json",
         output_path="/mnt/workout_analisys/data/prep_posts",
         preprocess_function=sample_preprocess_function,
-        batch_size=50
+        batch_size=100
     )
