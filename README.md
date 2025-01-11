@@ -1,52 +1,43 @@
 # Workout Analysis Pipeline
+This repository contains the code and resources for a Workout Analysis Pipeline, designed to process and analyze workout data extracted from training diaries on social media (VK). The pipeline automates the collection, processing, and visualization of workout metrics using a combination of Python scripts, APIs for large language models (LLMs), and data visualization libraries.
 
-## Описание проекта
+## Key Features
+**Data Collection**: Automates the parsing of VK posts to retrieve training diary entries.
+**Preprocessing**: Cleans and structures the raw text using regular expressions and classification methods.
+**LLM Integration**: Extracts key workout metrics such as repetitions, sets, and exercise names from unstructured text using LLM APIs.
+**Post-processing**: Converts extracted metrics into structured formats (e.g., tables) for easier analysis.
+**Visualization**: Generates dashboards and graphs to summarize workout data trends and insights.
 
-Проект предназначен для анализа тренировочных данных, извлеченных из дневника тренировок в соцсети VK. 
-Основные этапы обработки включают сбор данных, их предварительную обработку, использование API больших языковых моделей (LLM) для извлечения ключевых метрик, постобработку и визуализацию результатов.
+## Repository Structure
+- `get_data.py`: Fetches posts from VK and extracts workout-related texts.
+- `data_prep.py`: Preprocesses and classifies raw text data for further analysis.
+- `summarisation.py`: Handles interactions with LLM APIs, including sending queries and parsing responses.
+- `pipeline.py`: Executes the entire processing pipeline, integrating all stages of data collection, preprocessing, LLM analysis, and post-processing.
+- `utils.py`: Includes utility functions for handling JSON format corrections and other data operations.
+- `analisys.ipynb`: A Jupyter Notebook for creating visualizations and dashboards based on the processed data.
 
-## Функционал
+## Technologies Used
 
-1. **Сбор данных**: Парсинг записей из социальных сетей для извлечения тренировочных дневников.
-2. **Предобработка**: Использование регулярных выражений для фильтрации и очистки текстов.
-3. **Анализ с помощью LLM**: Извлечение метрик упражнений, таких как количество повторений и подходов.
-4. **Постобработка**: Формирование удобных таблиц и построение графиков для анализа.
-5. **Визуализация данных**: Создание дашбордов для представления результатов.
+**Programming Language**: Python 3.10
+**Libraries**:
+**Data Collection and Processing**: requests, tqdm, fire
+**Natural Language Processing**: LLM APIs (e.g., OpenAI)
+**Visualization**: pandas, matplotlib, seaborn
 
-## Структура проекта
-
-- `get_data.py`: Скрипт для парсинга группы вк и получения тектов из постов.
-- `data_prep.py`: Предварительная классификация записей из дневника.
-- `summarisation.py`: Логика работы с LLM, включая передачу запросов и парсинг ответов.
-- `pipeline.py`: Скрипт для обработки данных поэтапно. Содержит функцию для предобработки и интеграции данных с LLM.
-- `utils.py`: Утилиты для обработки данных и исправления JSON-формата.
-- `analisys.ipynb`: Jupyter Notebook для построения графиков и дашбордов на основе полученных данных.
-
-## Установка и запуск
-
-### Требования
-
-- Python 3.10
+## Getting Started
+Clone the repository:
 
 ```bash
+git clone <repository>
+cd <repository>
+```
+
+Set up a virtual environment:
+```bash
+
 VENV_NAME=venv
 python3.10 -m venv $VENV_NAME
 . "$VENV_NAME"/bin/activate
-
 python3.10 -m pip install -r requirements.txt
 ```
-Для запуска окружения в Jupyter Notebook:
-
-```bash
-python3.10 -m pip install ipykernel
-python3.10 -m ipykernel install --user --name=$VENV_NAME --display-name "$VENV_NAME"
-```
-
-
-
-### Установка
-
-1. Клонируйте репозиторий:
-   ```bash
-   git clone <репозиторий>
-   cd <репозиторий>
+Run the pipeline: Execute scripts or utilize the Jupyter Notebook for data analysis and visualization.
