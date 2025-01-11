@@ -1,5 +1,5 @@
 summary:
-	python3.10 summarisation.py
+	python3.10 ./src/summarisation.py
 
 all:
-	python3.10 pipeline.py
+	python3.10 ./src/pipeline.py

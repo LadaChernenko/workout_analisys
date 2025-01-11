@@ -1,7 +1,5 @@
 from fire import Fire
 from pathlib import Path
-import time
-import re
 import json
 from tqdm import tqdm
 import typing as tp
@@ -16,7 +14,7 @@ def diary_classifaer(data: tp.List[tp.Dict]) -> tp.List[tp.Dict]:
 
     for day in tqdm(data):
 
-        contains_word = any(tag in day['text'] for tag in week_set) #ndiary_classificationt(day['text'])
+        contains_word = any(tag in day['text'] for tag in week_set)
         day['dairy'] = contains_word
         new_data.append(day)
         # time.sleep(2)
