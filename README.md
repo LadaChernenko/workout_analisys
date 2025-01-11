@@ -18,11 +18,11 @@ This repository contains the code and resources for a Workout Analysis Pipeline,
 
 ## Technologies Used
 
-**Programming Language**: Python 3.10
-**Libraries**:
-**Data Collection and Processing**: requests, tqdm, fire
-**Natural Language Processing**: LLM APIs (e.g., OpenAI)
-**Visualization**: pandas, matplotlib, seaborn
+- **Programming Language**: Python 3.10
+- **Libraries**:
+- **Data Collection and Processing**: requests, tqdm, fire
+- **Natural Language Processing**: LLM APIs (e.g., OpenAI)
+- **Visualization**: pandas, matplotlib, seaborn
 
 ## Getting Started
 Clone the repository:
